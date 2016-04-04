@@ -9,6 +9,9 @@ env:
     - secure: "yVSWz0arNo08jACtUngVfAe6evtjlQ9n3M10whwhS7bm3V6tcvblLhLfKoh2fQe31m4YvxbNxLAhOw09Jci8+yFAbUMjkzaL8JK+j3r35wba2J6FaBk2eTpxPGhsRJCO5BDubSsD5wzZ+f8cNKYZpjrD0C+XgQzNACY27zcuMolz0Du78u0r5bg+lG3vztmm7hrdyf84+15sl4EdW0yJyOZTf/lLiOzAGWr32NCyZAbf0bSh/1W9Rs5PYClYZTEHlLI29YXx9dSe5TmyAXipM23l83ZzccbgVKNcldGAfhhcnReFxALgzW6Y3pddhk6oQmSjgZGQT6ZG80xeP7JGwCUoenj+ekH5fdJL4WllK4wJWM3eZWqgnrdWzyqV3Ssbxa1uKatAVrU4cHOQXg+rh8e0b17WzXlZlKCCr2uElkjSEzXJZh4YA2ifaqABmmJ57/J/jlyiaAqNHEv+bf4wCxMtYcdFkM0+eszeVcWo+N97Iwe6Iux2G6CQhjR2SRpgE4ObrSeWr3QrJxq3OjdPk0mKqGYedvceEdqUQSuQbRy1WbDxhDhXO2byPB2vp5h5ZbAR27PfaloARUi5rc6poLpmVvWv4Erzb3S+h+mbb+97p/sxoFsUO4r+wKPEGz9/GSfWhGUQqoyy2rsdKK3IqO1QQM4AA2/HroxW8oaolOk="
 
 
+before install:
+    - brew remove --force $(brew list)
+
 install:
     - |
       MINICONDA_URL="http://repo.continuum.io/miniconda"
