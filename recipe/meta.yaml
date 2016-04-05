@@ -23,7 +23,8 @@ requirements:
 
 test:
     commands:
-        - exit $(test -f ${PREFIX}/lib/libmo_unpack.a)  # [not win]
+        - test -f ${PREFIX}/lib/libmo_unpack.a  # [not win]
+        - conda inspect linkages -n _test libmo_unpack  # [linux]
 
 about:
     home: https://github.com/SciTools/libmo_unpack

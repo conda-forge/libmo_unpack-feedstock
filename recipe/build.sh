@@ -1,4 +1,12 @@
 #!/bin/bash
+
+if [[ $(uname) == 'Darwin' ]]; then
+  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
+elif [[ $(uname) == 'Linux' ]]; then
+  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
+fi
+
+
 mkdir m4
 
 # Patch the configure.ac as per https://lists.ubuntu.com/archives/fwts-devel/2013-June/003391.html
@@ -14,9 +22,5 @@ fi
 ./configure --prefix=$PREFIX CFLAGS="$CFLAGS"
 
 make
-
-if [[ $(uname) == Linux ]]; then
-    make check
-fi
-
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
