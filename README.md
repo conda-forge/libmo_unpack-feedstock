@@ -5,7 +5,7 @@ Home: https://github.com/SciTools/libmo_unpack
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Met Office PP/FieldsFile compression schemes
 
@@ -69,9 +69,10 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libmo_unpack-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/libmo_unpack-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/libmo_unpack-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libmo_unpack-feedstock) 
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libmo_unpack-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libmo_unpack-feedstock/branch/master)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libmo-unpack-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libmo-unpack-feedstock/branch/master)
 
 Current release info
 ====================
