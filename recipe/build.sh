@@ -13,7 +13,7 @@ mkdir m4
 sed -i".ac" -e 's/AM_PROG_AR/m4_ifdef([AM_PROG_AR], [AM_PROG_AR])/g' configure.ac
 autoreconf --install
 
-CFLAGS="-O3 -mfpmath=sse -msse"
+CFLAGS="-O3 -mfpmath=sse -msse $CFLAGS"
 
 if [[ $(uname) == Darwin ]]
 then
