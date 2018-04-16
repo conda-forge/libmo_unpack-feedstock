@@ -9,6 +9,7 @@ source:
   sha256: e09ef3e6f1075144acc5d6466b4ef70b2fe32ed4ab1840dd4fb7e15a40f3d370
   patches:
     - endian.patch  # [osx]
+    - tests_cmakelist.patch
 
 build:
   number: 0
@@ -22,9 +23,9 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libmo_unpack.so  # [not win]
-    - conda inspect linkages -p $PREFIX libmo_unpack  # [not win]
-    - conda inspect objects -p $PREFIX libmo_unpack  # [osx]
+    - test -f ${PREFIX}/lib/libmo_unpack${SHLIB_EXT}  # [not win]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 
 about:
