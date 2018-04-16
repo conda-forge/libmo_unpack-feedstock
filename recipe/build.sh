@@ -1,7 +1,11 @@
 #!/bin/bash
 
-export CFLAGS="-I$PREFIX/include $CFLAGS"
-# export CFLAGS="-Wl,-U,_MO_syslog -I$PREFIX/include $CFLAGS" 
+if [[ $(uname) == Linux ]]; then
+  export CFLAGS="-I$PREFIX/include $CFLAGS"
+elif [[ $(uname) == Darwin ]]; then
+  export CFLAGS="-Wl,-U,_MO_syslog -I$PREFIX/include $CFLAGS" 
+fi
+
  
 mkdir build && cd build
 
