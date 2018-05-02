@@ -1,0 +1,24 @@
+diff -Naur libmo_unpack-3.1.2.orig/src/pack_ppfield.c libmo_unpack-3.1.2/src/pack_ppfield.c
+--- libmo_unpack-3.1.2.orig/src/pack_ppfield.c	2015-10-09 07:44:17.000000000 -0300
++++ libmo_unpack-3.1.2/src/pack_ppfield.c	2017-07-19 05:39:15.527929808 -0300
+@@ -40,7 +40,7 @@
+ #elif _DARWIN_SOURCE
+   #include <architecture/byte_order.h>
+ #else
+-  #include <endian.h>
++  #include <machine/endian.h>
+ #endif
+ #include "wgdosstuff.h"
+ #include "logerrors.h"
+diff -Naur libmo_unpack-3.1.2.orig/src/unpack_ppfield.c libmo_unpack-3.1.2/src/unpack_ppfield.c
+--- libmo_unpack-3.1.2.orig/src/unpack_ppfield.c	2015-10-09 07:44:17.000000000 -0300
++++ libmo_unpack-3.1.2/src/unpack_ppfield.c	2017-07-19 05:39:22.519929488 -0300
+@@ -40,7 +40,7 @@
+ #elif _DARWIN_SOURCE
+   #include <architecture/byte_order.h>
+ #else
+-  #include <endian.h>
++  #include <machine/endian.h>
+ #endif
+ #include "wgdosstuff.h"
+ #include "logerrors.h"
