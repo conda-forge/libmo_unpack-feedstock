@@ -18,8 +18,9 @@ build:
 requirements:
   build:
     - cmake
+    - {{ compiler('c') }}
+  host:
     - check
-    - toolchain
 
 test:
   commands:
