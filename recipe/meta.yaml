@@ -12,7 +12,7 @@ source:
     - tests_cmakelist.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -25,9 +25,6 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libmo_unpack${SHLIB_EXT}  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
-
 
 about:
   home: https://github.com/SciTools/libmo_unpack
