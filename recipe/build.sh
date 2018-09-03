@@ -13,6 +13,9 @@ cmake -D CMAKE_INSTALL_PREFIX=$PREFIX \
       -D CMAKE_INSTALL_LIBDIR:PATH=$PREFIX/lib \
       $SRC_DIR
 
-make
+make -j$CPU_COUNT
 make test
 make install
+
+# We can remove this when we start using the new conda-build.
+find $PREFIX -name '*.la' -delete
