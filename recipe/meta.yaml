@@ -19,6 +19,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - check
@@ -29,7 +30,7 @@ test:
 
 about:
   home: https://github.com/SciTools/libmo_unpack
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
 
   summary: 'Met Office PP/FieldsFile compression schemes.'
