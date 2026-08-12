@@ -216,4 +216,5 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
 * [@rhattersley](https://github.com/rhattersley/)
+* [@trexfeathers](https://github.com/trexfeathers/)
 
